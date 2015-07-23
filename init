@@ -1,0 +1,5 @@
+#!/bin/bash
+rm -rf _home
+mkdir _home
+cp -r ~/.ssh _home/
+cp ~/.gitconfig _home/

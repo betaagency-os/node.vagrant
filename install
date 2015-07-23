@@ -1,0 +1,14 @@
+#!/bin/bash
+sudo apt-get update
+sudo apt-get install -y build-essential git make gpp ruby-dev mongodb mysql-server
+
+sudo gem install compass
+
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash
+
+export NVM_DIR="/home/vagrant/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+nvm install 0.10
+nvm alias default 0.10
+npm i -g pac supervisor foreman gulp
